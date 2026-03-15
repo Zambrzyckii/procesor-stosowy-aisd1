@@ -9,25 +9,25 @@ Stos przechowuje dane do obliczeń. Elementami stosu są listy zawierające zero
 Można założyć, że wszystkie programy będą poprawne, tzn. nie wystąpią sytuacje nie przewidziane w liście instrukcji.
 
 Lista instrukcji procesora jest następująca:
-' 	apostrof 	włóż na stos pustą listę
-, 	przecinek 	zdejmij listę ze stosu
-: 	dwukropek 	włóż na stos kopię listy z wierzchołka stosu
-; 	średnik 	zamień miejscami listę na wierzchołku stosu i listę bezpośrednio pod nim
-@ 	at 	zdejmij ze stosu liczbę A, następnie włóż na stos kopię listy na A-tej pozycji na stosie (0 to wierzchołek stosu, 1 lista bezpośrednio pod nim itp.); program '0@ jest równoważny instrukcji :
-. 	kropka 	wczytaj znak ze standardowego wejścia i dołącz go na początek listy na wierzchołku stosu
-> 	większe niż 	wypisz na standardowe wyjście pierwszy znak z listy na wierzchołku stosu i zdejmij listę z wierzchołka stosu
-! 	wykrzyknik 	negacja logiczna: jeżeli na wierzchołku stosu jest pusta lista lub lista zawierająca pojedyńczy znak '0', zastąp ją listą zawierającą znak '1', w przeciwnym wypadku zastąp listę z wierzchołka stosu listą zawierającą znak '0'
-< 	mniejsze niż 	zdejmij ze stosu liczbę A, zdejmij ze stosu liczbę B, jeżeli B < A, umieść na stosie liczbę 1, w przeciwnym wypadku umieść na stosie liczbę 0
-= 	równe 	zdejmij ze stosu liczbę A, zdejmij ze stosu liczbę B, jeżeli B = A, umieść na stosie liczbę 1, w przeciwnym wypadku umieść na stosie liczbę 0
-~ 	tylda 	umieść na stosie liczbę równą numerowi tej instrukcji (wartość wskaźnika instrukcji)
-? 	znak zapytania 	skok warunkowy: zdejmij ze stosu liczbę T, zdejmij ze stosu listę W, jeżeli W nie jest pusta i nie zawiera wyłącznie znaku '0', wpisz do wskaźnika instrukcji liczbę T i nie zwiększaj wskaźnika instrukcji;
-- 	minus 	negacja: jeżeli ostatnim znakiem listy na szczycie stosu jest '-' (minus), usuń go z listy; w przeciwnym wypadku dołącz '-' na koniec listy na szczycie stosu
-^ 	daszek 	wartość bezwzględna: jeżeli ostatnim znakiem listy na szczycie stosu '-' (minus) usuń go z listy
-$ 	dolar 	podział: odłącz pierwszy znak z listy na szczycie stosu i włóż go na stos
-# 	hasz 	zdejmij ze stosu listę A; dołącz A na koniec listy na szczycie stosu
-+ 	plus 	zdejmij ze stosu liczbę A, zdejmij ze stosu liczbę B, włóż na stos liczbę A + B
-& 	ampersand 	wypisz na standardowe wyjście zawartość stosu w formacie:
-n: lista na n-tej pozycji na stosie
+- ' 	apostrof 	włóż na stos pustą listę
+- , 	przecinek 	zdejmij listę ze stosu
+- : 	dwukropek 	włóż na stos kopię listy z wierzchołka stosu
+- ; 	średnik 	zamień miejscami listę na wierzchołku stosu i listę bezpośrednio pod nim
+- @ 	at 	zdejmij ze stosu liczbę A, następnie włóż na stos kopię listy na A-tej pozycji na stosie (0 to wierzchołek stosu, 1 lista bezpośrednio pod nim itp.); program '0@ jest równoważny instrukcji :
+- . 	kropka 	wczytaj znak ze standardowego wejścia i dołącz go na początek listy na wierzchołku stosu
+- 	większe niż 	wypisz na standardowe wyjście pierwszy znak z listy na wierzchołku stosu i zdejmij listę z wierzchołka stosu
+- ! 	wykrzyknik 	negacja logiczna: jeżeli na wierzchołku stosu jest pusta lista lub lista zawierająca pojedyńczy znak '0', zastąp ją listą zawierającą znak '1', w przeciwnym wypadku zastąp listę z wierzchołka stosu listą zawierającą znak '0'
+- < 	mniejsze niż 	zdejmij ze stosu liczbę A, zdejmij ze stosu liczbę B, jeżeli B < A, umieść na stosie liczbę 1, w przeciwnym wypadku umieść na stosie liczbę 0
+- = 	równe 	zdejmij ze stosu liczbę A, zdejmij ze stosu liczbę B, jeżeli B = A, umieść na stosie liczbę 1, w przeciwnym wypadku umieść na stosie liczbę 0
+- ~ 	tylda 	umieść na stosie liczbę równą numerowi tej instrukcji (wartość wskaźnika instrukcji)
+- ? 	znak zapytania 	skok warunkowy: zdejmij ze stosu liczbę T, zdejmij ze stosu listę W, jeżeli W nie jest pusta i nie zawiera wyłącznie znaku '0', wpisz do wskaźnika instrukcji liczbę T i nie zwiększaj wskaźnika instrukcji;
+- -- 	minus 	negacja: jeżeli ostatnim znakiem listy na szczycie stosu jest '-' (minus), usuń go z listy; w przeciwnym wypadku dołącz '-' na koniec listy na szczycie stosu
+- ^ 	daszek 	wartość bezwzględna: jeżeli ostatnim znakiem listy na szczycie stosu '-' (minus) usuń go z listy
+- $ 	dolar 	podział: odłącz pierwszy znak z listy na szczycie stosu i włóż go na stos
+- 	hasz 	zdejmij ze stosu listę A; dołącz A na koniec listy na szczycie stosu
+- + 	plus 	zdejmij ze stosu liczbę A, zdejmij ze stosu liczbę B, włóż na stos liczbę A + B
+- & 	ampersand 	wypisz na standardowe wyjście zawartość stosu w formacie:
+- n: lista na n-tej pozycji na stosie
 ...
 1: lista na drugim miejscu na stosie
 0: lista na wierzchołku stosu
